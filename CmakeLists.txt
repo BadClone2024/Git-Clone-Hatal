@@ -1,0 +1,11 @@
+cmake_minimum_required(VERSION 3.10)
+project(VC3)
+
+set(OpenCV_DIR C:/Users/moshe nahshon kislev/Documents/CPP/opencv/build)
+
+find_package(OpenCV REQUIRED)
+
+add_executable(${PROJECT_NAME} src/main.cpp src/video_functions.cpp)
+
+
+target_link_libraries(${PROJECT_NAME} ${OpenCV_LIBS})

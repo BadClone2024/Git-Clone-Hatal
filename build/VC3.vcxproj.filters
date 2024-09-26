@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="C:\Users\moshe nahshon kislev\Documents\CPP\VC5 git\src\main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\moshe nahshon kislev\Documents\CPP\VC5 git\src\video_functions.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\Users\moshe nahshon kislev\Documents\CPP\VC5 git\CmakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{5697F7D4-5019-32A8-8060-5A10DF030564}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>
