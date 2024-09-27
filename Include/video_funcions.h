@@ -17,7 +17,7 @@ using namespace cv;
 
 string customToLowerCase(string str);
 
-int checkVideoFileAccess(const string &readFilePath/*, const string &writeFilePath*/);
+int checkVideoFileAccess(const string &readFilePath);
 
 bool containsOnlyNumbers(const string &parameter);
 
@@ -33,7 +33,7 @@ string countSeconds(chrono::high_resolution_clock::time_point start, chrono::hig
 
 int help();
 
-int playVideo(const string &videoFile);
+int playVideoInMediaPlayer(const string &videoFile);
 
 int get_codec_from_extension(const string &outputPath);
 

@@ -58,7 +58,7 @@ bool stringExists(string arr[], int size, string target)
     return false; // Not found
 }
 
-int checkVideoFileAccess(const string &readFilePath /*,const string &writeFilePath*/)
+int checkVideoFileAccess(const string &readFilePath)
 {
     // Check for reading the video file
     VideoCapture cap(readFilePath);
@@ -132,75 +132,75 @@ string commandLineHandle(int argc, char *argv[])
 
     if (operation == "convert")
     {
-        example = "\nProper syntax: VC3 convert MyVideo.MP4 MyVideo.AVI /Log /Play"+ example;
+        example = "\nProper syntax: VC3 convert MyVideo.MP4 MyVideo.AVI /Log /Play" + example;
         if (argc > 6)
-            return "Too many paramaters"+ example;
+            return "Too many paramaters" + example;
     }
     if (operation == "cut")
     {
-        example = "\nProper syntax: VC3 cut MyVideo.MP4 MyVideo.MP4 /Log /Play"+ example;
+        example = "\nProper syntax: VC3 cut MyVideo.MP4 MyVideo.MP4 /Log /Play" + example;
         if (argc < 5)
-            return "There must be at least two paramaters in order to cut the video."+ example;
+            return "There must be at least two paramaters in order to cut the video." + example;
 
         if (!containsOnlyNumbers(string(argv[4]))) // argv[4] is the first paramater that must contain the first second you want to start cutting from.
-            return "Cutting paramaters, instead of " + string("\"" + string(argv[4]) + "\"") + string(", must be numbers only"+ example);
+            return "Cutting paramaters, instead of " + string("\"" + string(argv[4]) + "\"") + string(", must be numbers only" + example);
 
         if (argc < 6)
-            return "Missing last parameter"+ example;
+            return "Missing last parameter" + example;
 
         if (!containsOnlyNumbers(string(argv[5]))) // argv[5] is the last paramater that must contain the last second you want to finish the video at.
-            return "Cutting paramaters, instead of " + string("\"" + string(argv[5]) + "\"") + string(", must be numbers only"+ example);
+            return "Cutting paramaters, instead of " + string("\"" + string(argv[5]) + "\"") + string(", must be numbers only" + example);
 
         if (stod(argv[4]) >= stod(argv[5]))
-            return "Starting second must be before the ending second"+ example;
+            return "Starting second must be before the ending second" + example;
 
         if (argc > 8)
-            return "Too many paramaters"+ example;
+            return "Too many paramaters" + example;
     }
 
     if (operation == "resize")
     {
         example = "\nProper syntax: VC3 resize MyVideo.MP4 MyVideo.MP4 500 250 /Log /Play";
         if (argc < 5)
-            return "At least two paramaters are required: width and height"+ example;
+            return "At least two paramaters are required: width and height" + example;
 
         if (!containsOnlyNumbers(string(argv[4]))) // argv[4] is the first paramater that must contain the width
-            return "Resizing paramaters, instead of " + string("\"" + string(argv[4]) + "\"") + string(", must be numbers only"+ example);
+            return "Resizing paramaters, instead of " + string("\"" + string(argv[4]) + "\"") + string(", must be numbers only" + example);
 
         if (argc < 6)
-            return "Missing one parameter"+ example;
+            return "Missing one parameter" + example;
 
         if (!containsOnlyNumbers(string(argv[5]))) // argv[5] is the last paramater that must contain the height
-            return "Resizing paramaters, instead of " + string("\"" + string(argv[5]) + "\"") + string(", must be numbers only"+ example);
+            return "Resizing paramaters, instead of " + string("\"" + string(argv[5]) + "\"") + string(", must be numbers only" + example);
 
         if (argc > 8)
 
-            return "Too many paramaters"+ example;
+            return "Too many paramaters" + example;
     }
     if (operation == "rotate")
     {
         example = "\nProper syntax: VC3 rotate MyVideo.MP4 MyVideo.MP4 45 /Log /Play";
         if (argc < 5)
-            return "Missing roitation angle parameter"+ example;
+            return "Missing roitation angle parameter" + example;
 
         if (!containsOnlyNumbers(string(argv[4]))) // argv[4] is the paramater that would rotate the video.
-            return "Rotation paramater, instead of " + string("\"" + string(argv[4]) + "\"") + string(", must be a number")+ example;
+            return "Rotation paramater, instead of " + string("\"" + string(argv[4]) + "\"") + string(", must be a number") + example;
 
         if (argc > 7)
 
-            return "Too many paramaters"+ example;
+            return "Too many paramaters" + example;
     }
     if (operation == "watermark")
     {
         example = "\nProper syntax: VC3 MyVideo.MP4 MyVideo.MP4 100 50 \"This video was marked by VC3\" /Log /Play";
         if (argc < 7)
-            return "Missing parameters"+ example;
+            return "Missing parameters" + example;
 
         if (!containsOnlyNumbers(string(argv[4]))) // argv[4] is the paramater that must contain the X value.
-            return "X location paramater, instead of " + string("\"" + string(argv[4]) + "\"") + string(", must be a number"+ example);
+            return "X location paramater, instead of " + string("\"" + string(argv[4]) + "\"") + string(", must be a number" + example);
 
         if (!containsOnlyNumbers(string(argv[5]))) // argv[5] is the paramater that must contain the Y value.
-            return "Y location paramater, instead of " + string("\"" + string(argv[5]) + "\"") + string(", must be a number"+ example);
+            return "Y location paramater, instead of " + string("\"" + string(argv[5]) + "\"") + string(", must be a number" + example);
 
         if (argc > 7 && getCommandLine(argc, argv).find("/log") == string::npos && getCommandLine(argc, argv).find("/play") == string::npos)
             return "Too many paramaters.\nNote: for texts that contain spaces, pelase add quotations as such: \"Your text with spaces\"." + example;
@@ -290,7 +290,6 @@ void LogUpdate(string FileName, string LogLine, bool logging)
         }
 }
 
-
 string countSeconds(chrono::high_resolution_clock::time_point start, chrono::high_resolution_clock::time_point end)
 {
     auto duration = chrono::duration_cast<chrono::seconds>(end - start).count();
@@ -303,9 +302,6 @@ string countSeconds(chrono::high_resolution_clock::time_point start, chrono::hig
 
     return ss.str(); // Return the formatted elapsed time as a string
 }
-
-
-
 
 int help()
 {
@@ -333,35 +329,23 @@ int help()
     return 1;
 }
 
-int playVideo(const string &videoFile)
+int playVideoInMediaPlayer(const string &videoFile)
 {
-    VideoCapture cap(videoFile);
-    if (!cap.isOpened())
+    // Construct the system command to open the video file in the default media player
+    string command = "start " + videoFile;
+
+    // Execute the command to play the video
+    int result = system(command.c_str());
+
+    // Check if the command was successful
+    if (result != 0)
     {
-        cerr << "Error: Could not open the video file." << endl;
-        return -1; // Return an error code
+        cerr << "Error: Could not open the video file in the media player." << endl;
+        return -1; // Return an error code if it fails
     }
 
-    // Play the video
-    Mat frame;
-    while (true)
-    {
-        cap >> frame; // Capture frame-by-frame
-        if (frame.empty())
-            break; // Check if the video is finished
-
-        imshow("Video Playback", frame); // Display the frame
-
-        // Exit if the user presses the 'q' key
-        if (waitKey(30) == 27) // Use '27' for the Escape key; you can use 'q' by checking if waitKey(30) == 'q'
-            break;             // Adjust delay as needed
-    }
-
-    cap.release();       // Release the video capture object
-    destroyAllWindows(); // Close all OpenCV windows
-    return 0;            // Return 0 to indicate success
+    return 0; // Return 0 to indicate success
 }
-
 int get_codec_from_extension(const string &outputPath)
 {
     string extension = outputPath.substr(outputPath.find_last_of(".") + 1);
@@ -446,7 +430,6 @@ int rotateVideo(const string &inputPath, const string &outputPath, double angle)
 // Function to resize a video
 int resizeVideo(const string &inputPath, const string &outputPath, int newWidth, int newHeight)
 {
-
     // Open the input video file
     VideoCapture cap(inputPath);
     if (!cap.isOpened())
