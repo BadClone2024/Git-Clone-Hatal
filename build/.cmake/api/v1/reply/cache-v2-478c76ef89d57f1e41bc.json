@@ -715,7 +715,7 @@
 				}
 			],
 			"type" : "FILEPATH",
-			"value" : "C:/Program Files (x86)/Embarcadero/Studio/22.0/bin/rc.exe"
+			"value" : "C:/Program Files (x86)/Embarcadero/Studio/23.0/bin/rc.exe"
 		},
 		{
 			"name" : "CMAKE_RC_COMPILER_WORKS",

@@ -60,7 +60,7 @@
 			"compiler" : 
 			{
 				"implicit" : {},
-				"path" : "C:/Program Files (x86)/Embarcadero/Studio/22.0/bin/rc.exe"
+				"path" : "C:/Program Files (x86)/Embarcadero/Studio/23.0/bin/rc.exe"
 			},
 			"language" : "RC",
 			"sourceFileExtensions" : 

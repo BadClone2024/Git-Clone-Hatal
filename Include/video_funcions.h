@@ -33,7 +33,7 @@ string countSeconds(chrono::high_resolution_clock::time_point start, chrono::hig
 
 int help();
 
-int playVideoInMediaPlayer(const string &videoFile);
+void playVideo(const string &videoPath, int screenWidth, int screenHeight);
 
 int get_codec_from_extension(const string &outputPath);
 

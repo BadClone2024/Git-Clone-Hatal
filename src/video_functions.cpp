@@ -329,23 +329,52 @@ int help()
     return 1;
 }
 
-int playVideoInMediaPlayer(const string &videoFile)
+void playVideo(const string &videoPath, int screenWidth, int screenHeight)
 {
-    // Construct the system command to open the video file in the default media player
-    string command = "start " + videoFile;
+    // Open the video file
+    VideoCapture cap(videoPath);
 
-    // Execute the command to play the video
-    int result = system(command.c_str());
-
-    // Check if the command was successful
-    if (result != 0)
+    // Check if the video file was opened successfully
+    if (!cap.isOpened())
     {
-        cerr << "Error: Could not open the video file in the media player." << endl;
-        return -1; // Return an error code if it fails
+        return;
     }
 
-    return 0; // Return 0 to indicate success
+    // Get the video frame rate
+    double fps = cap.get(CAP_PROP_FPS);
+    int delay = 1000 / fps; // Delay between frames in milliseconds
+
+    Mat frame;
+    while (true)
+    {
+        // Read the next frame
+        bool isSuccess = cap.read(frame);
+
+        if (!isSuccess)
+        {
+            break;
+        }
+
+        // Resize the frame to fit the screen size
+        Mat resizedFrame;
+        resize(frame, resizedFrame, Size(screenWidth, screenHeight));
+
+        // Display the resized frame
+        imshow("Video Playback", resizedFrame);
+
+        // Wait for 'ESC' key press for 1ms
+        if (waitKey(delay) >= 0)
+        { // '27' is the ASCII code for the 'ESC' key
+            cout << "Key was pressed. Exiting..." << endl;
+            break;
+        }
+    }
+
+    // Release the video file and close the window
+    cap.release();
+    destroyAllWindows();
 }
+
 int get_codec_from_extension(const string &outputPath)
 {
     string extension = outputPath.substr(outputPath.find_last_of(".") + 1);

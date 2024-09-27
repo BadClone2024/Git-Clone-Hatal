@@ -30,10 +30,7 @@ int main(int argc, char *argv[])
         logging = true;
 
     if (customToLowerCase(string(argv[argc - 1])) == "/play" || customToLowerCase(string(argv[argc - 2])) == "/play")
-    {
         playTheVideo = true;
-        cout << "Video";
-    }
 
     whatToDo = commandLineHandle(argc, argv);
 
@@ -54,39 +51,40 @@ int main(int argc, char *argv[])
         {
             LogUpdate(logfilename, "Converting a video", logging);
             convert_video(argv[2], argv[3]);
-            LogUpdate(logfilename, string("The video: " + string(argv[2]) + " was successfully converted and transformoed to: " + string(argv[3])), logging);
+            LogUpdate(logfilename, string("The video: " + infilemain + " was successfully converted and transformoed to: " + outfilemain), logging);
         }
         if (operation == "resize")
         {
             LogUpdate(logfilename, "Resizing a video", logging);
             resizeVideo(argv[2], argv[3], stoi(argv[4]), stoi(argv[5]));
-            LogUpdate(logfilename, string("The video: " + string(argv[2]) + " was successfully resized and transformoed to: " + string(argv[3])), logging);
+            LogUpdate(logfilename, string("The video: " + infilemain + " was successfully resized and transformoed to: " + outfilemain), logging);
         }
         if (operation == "cut")
         {
             LogUpdate(logfilename, "Cutting a video", logging);
             cutVideo(argv[2], argv[3], stod(argv[4]), stod(argv[5]));
-            LogUpdate(logfilename, string("The video: " + string(argv[2]) + " was successfully cutted and transformoed to: " + string(argv[3])), logging);
+            LogUpdate(logfilename, string("The video: " + infilemain + " was successfully cutted and transformoed to: " + outfilemain), logging);
         }
         if (operation == "blur")
         {
             LogUpdate(logfilename, "Blurring a video", logging);
             blurVideo(argv[2], argv[3], stoi(argv[4]));
-            LogUpdate(logfilename, string("The video: " + string(argv[2]) + " was successfully blurred and transformoed to: " + string(argv[3])), logging);
+            LogUpdate(logfilename, string("The video: " + infilemain + " was successfully blurred and transformoed to: " + outfilemain), logging);
         }
         if (operation == "watermark")
         {
             LogUpdate(logfilename, "Watermarking a video", logging);
             add_text_to_video(argv[2], argv[3], stoi(argv[4]), stoi(argv[5]), argv[6]);
-            LogUpdate(logfilename, string("The video: " + string(argv[2]) + " was successfully watermarked and transformoed to: " + string(argv[3])), logging);
+            LogUpdate(logfilename, string("The video: " + infilemain + " was successfully watermarked and transformoed to: " + outfilemain), logging);
         }
         if (operation == "/?")
             help();
-        if (playTheVideo && whatToDo == "success")
-            playVideoInMediaPlayer(argv[3]);
+        if (playTheVideo)
+            playVideo(argv[3], 1280, 720);
 
         auto end = chrono::high_resolution_clock::now();
         LogUpdate(logfilename, ("The operation took: " + string(countSeconds(start, end))), logging);
+        cout << argv[0];
     }
 
     return 0;
