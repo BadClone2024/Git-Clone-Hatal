@@ -18,7 +18,6 @@ int main(int argc, char *argv[])
 
     if (argc < 2)
     {
-        cout << "Last eser";
         cout << "\nVideo Conventor 3 By Moshe Nahshon Kisev\n";
         cout << "Example:\nVC3 {operation} [source file] [target file] [paramaters] /Log /Play\n";
         cout << "For more info: VC3 /?\n";
