@@ -84,7 +84,7 @@ int main(int argc, char *argv[])
 
         auto end = chrono::high_resolution_clock::now();
         LogUpdate(logfilename, ("The operation took: " + string(countSeconds(start, end))), logging);
-        cout << argv[0];
+        cout << "The operation took: " << countSeconds(start, end);
     }
 
     return 0;

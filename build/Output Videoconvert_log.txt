@@ -1,0 +1,6 @@
+2024-9-28 22:23:28: Converting a video
+2024-9-28 22:23:47: The video: c:\users\moshe nahshon kislev\documents\cpp\vc5 git\git clone\build\videos\video.mp4 was successfully converted and transformoed to: c:\users\moshe nahshon kislev\documents\cpp\vc5 git\git clone\build\output videoconvert.avi
+2024-9-28 22:23:55: The operation took: 0:26 seconds.
+2024-9-28 22:24:57: Converting a video
+2024-9-28 22:25:15: The video: c:\users\moshe nahshon kislev\documents\cpp\vc5 git\git clone\build\videos\video.mp4 was successfully converted and transformoed to: c:\users\moshe nahshon kislev\documents\cpp\vc5 git\git clone\build\output videoconvert.avi
+2024-9-28 22:25:18: The operation took: 0:20 seconds.

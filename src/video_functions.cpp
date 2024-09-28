@@ -300,7 +300,11 @@ string countSeconds(chrono::high_resolution_clock::time_point start, chrono::hig
     stringstream ss;
     ss << minutes << ":" << (seconds < 10 ? "0" : "") << seconds; // Format as MM:SS
 
-    return ss.str(); // Return the formatted elapsed time as a string
+    if (minutes > 0){
+        return ss.str() + string(" minutes.");
+    }
+
+    return ss.str() + string(" seconds."); // Return the formatted elapsed time as a string
 }
 
 int help()
