@@ -1,19 +1,19 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <ClCompile Include="C:\Users\moshe nahshon kislev\Documents\CPP\VC5 git\Git clone\src\main.cpp">
+    <ClCompile Include="C:\Users\shlomo haim\Documents\GitHub\Git-Clone-Hatal\src\main.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\moshe nahshon kislev\Documents\CPP\VC5 git\Git clone\src\video_functions.cpp">
+    <ClCompile Include="C:\Users\shlomo haim\Documents\GitHub\Git-Clone-Hatal\src\video_functions.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <CustomBuild Include="C:\Users\moshe nahshon kislev\Documents\CPP\VC5 git\Git clone\CmakeLists.txt" />
+    <CustomBuild Include="C:\Users\shlomo haim\Documents\GitHub\Git-Clone-Hatal\CmakeLists.txt" />
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Source Files">
-      <UniqueIdentifier>{5EFCA0E1-D838-3C1B-85C5-88A91627F0B7}</UniqueIdentifier>
+      <UniqueIdentifier>{18F2C8E5-5BDD-362B-A39B-8DC5376EC665}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
 </Project>

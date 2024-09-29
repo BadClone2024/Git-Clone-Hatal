@@ -2,10 +2,10 @@
 <Project>
   <ProjectOutputs>
     <ProjectOutput>
-      <FullPath>C:\Users\moshe nahshon kislev\Documents\CPP\VC5 git\Git clone\build\x64\Debug\ZERO_CHECK</FullPath>
+      <FullPath>C:\Users\shlomo haim\Documents\GitHub\Git-Clone-Hatal\build\x64\Debug\ZERO_CHECK</FullPath>
     </ProjectOutput>
     <ProjectOutput>
-      <FullPath>C:\Users\moshe nahshon kislev\Documents\CPP\VC5 git\Git clone\build\Debug\VC3.exe</FullPath>
+      <FullPath>C:\Users\shlomo haim\Documents\GitHub\Git-Clone-Hatal\build\Debug\VC3.exe</FullPath>
     </ProjectOutput>
   </ProjectOutputs>
   <ContentFiles />

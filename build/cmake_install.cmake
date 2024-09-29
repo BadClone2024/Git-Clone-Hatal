@@ -1,4 +1,4 @@
-# Install script for directory: C:/Users/moshe nahshon kislev/Documents/CPP/VC5 git/Git clone
+# Install script for directory: C:/Users/shlomo haim/Documents/GitHub/Git-Clone-Hatal
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -47,6 +47,6 @@ endif()
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-  file(WRITE "C:/Users/moshe nahshon kislev/Documents/CPP/VC5 git/Git clone/build/${CMAKE_INSTALL_MANIFEST}"
+  file(WRITE "C:/Users/shlomo haim/Documents/GitHub/Git-Clone-Hatal/build/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")
 endif()

@@ -1,6 +1,6 @@
-^C:\USERS\MOSHE NAHSHON KISLEV\DOCUMENTS\CPP\VC5 GIT\GIT CLONE\CMAKELISTS.TXT
+^C:\USERS\SHLOMO HAIM\DOCUMENTS\GITHUB\GIT-CLONE-HATAL\CMAKELISTS.TXT
 setlocal
-"C:\Program Files\CMake\bin\cmake.exe" "-SC:/Users/moshe nahshon kislev/Documents/CPP/VC5 git/Git clone" "-BC:/Users/moshe nahshon kislev/Documents/CPP/VC5 git/Git clone/build" --check-stamp-file "C:/Users/moshe nahshon kislev/Documents/CPP/VC5 git/Git clone/build/CMakeFiles/generate.stamp"
+"C:\Program Files\CMake\bin\cmake.exe" "-SC:/Users/shlomo haim/Documents/GitHub/Git-Clone-Hatal" "-BC:/Users/shlomo haim/Documents/GitHub/Git-Clone-Hatal/build" --check-stamp-file "C:/Users/shlomo haim/Documents/GitHub/Git-Clone-Hatal/build/CMakeFiles/generate.stamp"
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
