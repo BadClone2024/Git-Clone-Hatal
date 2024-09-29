@@ -1,6 +1,2 @@
-"C:\Users\shlomo haim\Documents\GitHub\Git-Clone-Hatal\build\Debug\VC3.exe" BLUR "C:\Users\shlomo haim\Documents\GitHub\Git-Clone-Hatal\build\Videos\a.mp4" "C:\Users\shlomo haim\Documents\GitHub\Git-Clone-Hatal\build\Videos\b.mp4" 3 /Log
-"C:\Users\shlomo haim\Documents\GitHub\Git-Clone-Hatal\build\Debug\VC3.exe" CUT "C:\Users\shlomo haim\Documents\GitHub\Git-Clone-Hatal\build\Videos\b.mp4" "C:\Users\shlomo haim\Documents\GitHub\Git-Clone-Hatal\build\Videos\c.mp4" 1 4 /Log
-"C:\Users\shlomo haim\Documents\GitHub\Git-Clone-Hatal\build\Debug\VC3.exe" RESIZE "C:\Users\shlomo haim\Documents\GitHub\Git-Clone-Hatal\build\Videos\c.mp4" "C:\Users\shlomo haim\Documents\GitHub\Git-Clone-Hatal\build\Videos\d.mp4" 500 1000 /Log
-"C:\Users\shlomo haim\Documents\GitHub\Git-Clone-Hatal\build\Debug\VC3.exe" ROTATE "C:\Users\shlomo haim\Documents\GitHub\Git-Clone-Hatal\build\Videos\d.mp4" "C:\Users\shlomo haim\Documents\GitHub\Git-Clone-Hatal\build\Videos\e.mp4" 40 /Log
-"C:\Users\shlomo haim\Documents\GitHub\Git-Clone-Hatal\build\Debug\VC3.exe" WATERMARK "C:\Users\shlomo haim\Documents\GitHub\Git-Clone-Hatal\build\Videos\e.mp4" "C:\Users\shlomo haim\Documents\GitHub\Git-Clone-Hatal\build\Videos\f.mp4" 40 100 "asdfsdfadsfg asdfg sdfg sdfg sdfg sdfg " /Log
+"C:\Users\shlomo haim\Documents\GitHub\Git-Clone-Hatal\build\Debug\VC3.exe" ROTATE "C:\Users\shlomo haim\Documents\GitHub\Git-Clone-Hatal\build\Videos\a.mp4" "C:\Users\shlomo haim\Documents\GitHub\Git-Clone-Hatal\build\Videos\b.mp4" 40 /Log
 Pause
