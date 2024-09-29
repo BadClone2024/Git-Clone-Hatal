@@ -71,6 +71,12 @@ int main(int argc, char *argv[])
             blurVideo(argv[2], argv[3], stoi(argv[4]));
             LogUpdate(logfilename, string("The video: " + infilemain + " was successfully blurred and transformoed to: " + outfilemain), logging);
         }
+        if (operation == "rotate")
+        {
+            LogUpdate(logfilename, "Rotating a video", logging);
+            rotateVideo(argv[2], argv[3], stoi(argv[4]));
+            LogUpdate(logfilename, string("The video: " + infilemain + " was successfully blurred and transformoed to: " + outfilemain), logging);
+        }
         if (operation == "watermark")
         {
             LogUpdate(logfilename, "Watermarking a video", logging);
