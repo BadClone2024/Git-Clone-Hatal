@@ -192,7 +192,7 @@ string commandLineHandle(int argc, char *argv[])
     }
     if (operation == "watermark")
     {
-        example = "\nProper syntax: VC3 MyVideo.MP4 MyVideo.MP4 100 50 \"This video was marked by VC3\" /Log /Play";
+        example = "\nProper syntax: VC3 watermark MyVideo.MP4 MyVideo.MP4 100 50 \"This video was marked by VC3\" /Log /Play";
         if (argc < 7)
             return "Missing parameters" + example;
 
@@ -329,7 +329,7 @@ int help()
             "    Example: VC3 blur MyVideo.MP4 MyVideo.MP4 50 /Log /Play\n\n"
             "    To watermark:\n"
             "    VC3 {watermark} [source file] [target file] [your text] [x] [y] /option1 /option2\n"
-            "    Example: VC3 MyVideo.MP4 MyVideo.MP4 \"This video was marked by VC3\" 100 50 /Log /Play\n";
+            "    Example: VC3 watermark MyVideo.MP4 MyVideo.MP4 \"This video was marked by VC3\" 100 50 /Log /Play\n";
     return 1;
 }
 
